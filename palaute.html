@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asiakaspalaute - Ravintola Lapintaika</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Anna palautetta - Ravintola Lapintaika</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="palaute.html">Asiakaspalaute</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <h2>Asiakaspalautelomake</h2>
+        <form action="" method="post">
+    
+            <label for="visit-date">Käyntipäivämäärä:</label>
+            <input type="date" id="visit-date" name="visit-date" required><br><br>
+    
+            <label for="wait-time">Kuinka kauan jouduit odottamaan ruokaa (minuuteissa):</label>
+            <input type="number" id="wait-time" name="wait-time" min="0" required><br><br>
+    
+            <h3>Arvioi kokemuksesi (1-5, 1 = heikko, 5 = erinomainen)</h3>
+
+            <label for="food-quality">Ruoan maku:</label>
+            <input type="range" id="food-quality" name="food-quality" min="1" max="5" step="1" value="3" oninput="document.getElementById('qualityValue').innerHTML = this.value">
+            <span id="qualityValue">3</span>/5
+            <br><br>
+
+            <label for="food-temperature">Ruoan lämpötila:</label>
+            <input type="range" id="food-temperature" name="food-temperature" min="1" max="5" step="1" value="3" oninput="document.getElementById('temperatureValue').innerHTML = this.value">
+            <span id="temperatureValue">3</span>/5
+            <br><br>
+
+            <label for="food-appearance">Ruoan ulkonäkö:</label>
+            <input type="range" id="food-appearance" name="food-appearance" min="1" max="5" step="1" value="3" oninput="document.getElementById('appearanceValue').innerHTML = this.value">
+            <span id="appearanceValue">3</span>/5
+            <br><br>
+
+            <label for="food-price">Ruoan hinta-laatusuhde:</label>
+            <input type="range" id="food-price" name="food-price" min="1" max="5" step="1" value="3" oninput="document.getElementById('priceValue').innerHTML = this.value">
+            <span id="priceValue">3</span>/5
+            <br><br>
+
+            <label for="service">Palvelun laatu:</label>
+            <input type="range" id="service" name="service" min="1" max="5" step="1" value="3" oninput="document.getElementById('serviceValue').innerHTML = this.value">
+            <span id="serviceValue">3</span>/5
+            <br><br>
+    
+            <label for="comments">Vapaa palaute:</label><br>
+            <textarea id="comments" name="comments" rows="5" cols="40"></textarea><br><br>
+    
+            <label for="contact-info">Yhteystiedot (vapaaehtoinen):</label>
+            <input type="text" id="contact-info" name="contact-info" placeholder="Sähköposti tai puhelinnumero"><br><br>
+    
+            <input type="submit" value="Lähetä palaute">
+        </form>
+    </section>
+    
+    <footer>
+        <p>Yhteystiedot:</p>
+        <p>Ravintola Lapintaika, Ravintolakatu 2, 98765 LAPINMAA</p>
+        <p>Puh. (012) 345 6789 | Sähköposti: <a href="mailto:varaukset@jokuposti.net">varaukset@jokuposti.net</a></p>
+        <p>Aukioloajat: ma - pe, 10:30 - 15:00</p>
+    </footer>
+</body>
+</html>
